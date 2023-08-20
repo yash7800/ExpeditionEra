@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>parallax scrolling website</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo"> ExpeditionEra </a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section >
+        <h2 id="text">
+            <span>
+                Its time for new 
+            </span><br>adventure
+        </h2>
+        <img src="8-86636_katunskiy-khrebet-cartoon-cartoon-mountains.png" id="forest">
+        
+        <a href="#" id="btn">Explore</a>
+    </section>
+    <div class="sec" >
+        <img src="stone.png" alt="Image">
+        <h2 id="#about">parallax scrolling effects</h2>
+       
+        <p>Welcome to ExpeditionEra Adventures: Unleash Your Wanderlust!
+
+            Embark on a journey of a lifetime with ExpeditionEra Adventures, your ultimate gateway to thrilling escapades and unforgettable expeditions. Whether you're a seasoned explorer or a curious wanderer seeking to quench your thirst for adrenaline, our adventure-providing website is your compass to discovering the world's most breathtaking destinations and heart-pounding activities.<br>
+            
+            Explore the Unknown:
+            Uncover hidden gems and uncharted territories as you peruse our meticulously curated selection of expeditions. From scaling towering peaks in the Himalayas to diving into the azure depths of the Great Barrier Reef, EpicQuest Adventures offers a diverse array of experiences that cater to every adventurer's unique interests.<br>
+            
+            Thrilling Activities:
+            Get your heart racing with a plethora of heart-pounding activities. Tackle whitewater rapids, soar above lush landscapes on a zip line, or challenge gravity with rock climbing. Our website boasts an array of adventures designed to push your limits and create memories that will last a lifetime.<br>
+            
+            Expert Guides:
+            Your safety and enjoyment are our top priorities. Our adventure partners are handpicked for their expertise, ensuring you're in capable hands every step of the way. Professional guides and instructors accompany you on your journey, offering valuable insights, tips, and a deep understanding of the local culture and environment.<br>
+            
+            Customizable Expeditions:
+            We understand that every traveler is unique. That's why we offer customizable expeditions that allow you to tailor your adventure to your preferences. Whether you're traveling solo, with friends, or as a family, ExpeditionEra Adventures crafts experiences that match your desired level of challenge, comfort, and pace.<br>
+            
+            Seamless Planning:
+            Gone are the days of arduous trip planning. Our user-friendly interface allows you to effortlessly browse, compare, and book your chosen adventure. From transportation and accommodations to equipment and itineraries, we take care of the logistics, so you can focus on the thrill of the adventure ahead.<br>
+            
+            Community of Adventurers:
+            Connect with like-minded thrill-seekers through our vibrant online community. Share stories, exchange tips, and gain inspiration from fellow adventurers who've conquered the same paths. Whether you're seeking travel buddies or advice, the EpicQuest Adventures community is here to support and uplift you.<br>
+            
+            Preserving Nature and Culture:
+            We believe in responsible and sustainable travel. Our adventures are designed to minimize environmental impact and respect local cultures. We work closely with communities to ensure that our presence benefits both travelers and the destinations we explore.<br>
+            
+            Ignite Your Passion:
+            EpicQuest Adventures is not just a website; it's a portal to ignite your passion for exploration, ignite your curiosity, and ignite your spirit of adventure. Step outside your comfort zone, embrace the unknown, and create stories that will be passed down for generations to come.</p>
+   
+    </div>
+    <script>
+    let text=document.getElementById('text');
+    let btn=document.getElementById('btn');
+    let forest=document.getElementById('forest');
+    let water=document.getElementById('water');
+    let header=document.getElementById('header');
+    let stone=document.getElementById('stone');
+
+    window.addEventListener('scroll',function(){
+        let value=window.scrollY;
+        text.style.top=50+ value*-0.5+'%';
+        btn.style.marginTop=value*1.5+'px';
+        stone.style.top=50+value*-0.12+'px';
+        forest.style.top=100+value*0.25+'px';
+    })
+</script>
+<footer>
+    <p>&copy; 2023 ExpeditionEra</p>
+</footer>
+</body>
+</html>
